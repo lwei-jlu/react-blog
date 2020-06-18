@@ -4,6 +4,7 @@ import {createBrowserHistory} from 'history';
 import Header from '../header';
 import homeCon from '../../container/homeCon';
 import helloCon from '../../container/helloCon';
+import './style.scss';
 const browserHistory = createBrowserHistory()
 
 export default class App extends React.Component {

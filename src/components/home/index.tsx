@@ -1,5 +1,6 @@
 import * as React from 'react'
 import { Link } from 'react-router-dom';
+import { Button } from 'antd';
 
 interface HelloProps {
     value?: string;
@@ -27,8 +28,8 @@ export default class Home extends React.Component<HelloProps, HelloStatus> {
             <span>{num}</span>
 
             <p>
-                <button onClick={onIncrement} style={{ marginRight: 20 }}> +  </button>
-                <button onClick={onDecrement}> - </button>
+                <Button type="primary" onClick={onIncrement} style={{ marginRight: 20 }}> +  </Button>
+                <Button type="primary" onClick={onDecrement}> - </Button>
             </p>
 
             <nav>

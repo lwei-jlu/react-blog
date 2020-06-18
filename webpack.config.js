@@ -71,5 +71,6 @@ module.exports = {
     }),
     // new webpack.HotModuleReplacementPlugin()
   ],
+  devtool: "source-map", // 开启调试
   mode: "development"
 }
