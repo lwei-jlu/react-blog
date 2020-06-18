@@ -4,9 +4,10 @@ const  HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
 // 入口文件
-  entry: './src/index.tsx',
+  entry: './app.js',
   output: {
-    path: __dirname + "/dist",
+    // path: __dirname + "/dist",
+    path: path.resolve(__dirname, 'dist'),
     filename: "bundle.js"
   },
   module: {
@@ -20,6 +21,13 @@ module.exports = {
           options:{
            presets:["@babel/env","@babel/react"]
        	  }
+        }
+      },
+      {
+        test: /\.js$/, // 匹配.js文件
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader'
         }
       },
       //配置sass
@@ -56,12 +64,12 @@ module.exports = {
     compress: true,
     open: true // 打开浏览器，默认false
   },
-  // plugins: [
-  //   new HtmlWebpackPlugin({ //打包输出HTML
-  //     filename: './index.html',
-  //     template: 'index.html'
-  //   }),
-  //   // new webpack.HotModuleReplacementPlugin()
-  // ],
+  plugins: [
+    new HtmlWebpackPlugin({ //打包输出HTML
+      filename: path.resolve(__dirname, 'dist/index.html'),
+      template: 'index.html'
+    }),
+    // new webpack.HotModuleReplacementPlugin()
+  ],
   mode: "development"
 }

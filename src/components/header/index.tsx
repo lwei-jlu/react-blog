@@ -1,5 +1,5 @@
 import * as React from 'react'
-import './style.scss';
+
 interface HelloProps {
     value?: string;
 }
@@ -7,7 +7,7 @@ interface HelloProps {
 interface HelloStatus {
     value?: string;
 }
-export default class Hello extends React.Component<HelloProps, HelloStatus> {
+export default class Header extends React.Component<HelloProps, HelloStatus> {
     constructor(props: HelloProps) {
         super(props);
         this.state = {
@@ -17,7 +17,7 @@ export default class Hello extends React.Component<HelloProps, HelloStatus> {
 
     public render() {
         return <div className='content'>
-            <span>Succ!!!!!!!!!!!!!!!!</span>
+            <span>Header!!!!!!!!!!!!!!!!</span>
             {this.props.value}
         </div>
     }
