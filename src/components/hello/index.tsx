@@ -2,6 +2,9 @@ import * as React from 'react'
 import './style.scss';
 interface HelloProps {
     value?: string;
+    num: number;
+    onIncrement: () => void;
+    onDecrement: () => void;
 }
 
 interface HelloStatus {
@@ -16,9 +19,15 @@ export default class Hello extends React.Component<HelloProps, HelloStatus> {
     }
 
     public render() {
+        const { num, onIncrement, onDecrement } = this.props;
         return <div className='content'>
-            <span>Succ!!!!!!!!!!!!!!!!</span>
-            {this.props.value}
+            <span>hello!!!!!!!!!!!!!!!!</span>
+            <span>{num}</span>
+
+            <p>
+                <button onClick={onIncrement} style={{ marginRight: 20 }}> +  </button>
+                <button onClick={onDecrement}> - </button>
+            </p>
         </div>
     }
 }

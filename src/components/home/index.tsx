@@ -3,6 +3,10 @@ import { Link } from 'react-router-dom';
 
 interface HelloProps {
     value?: string;
+    num: number;
+    onIncrement: () => void;
+    onDecrement: () => void;
+
 }
 
 interface HelloStatus {
@@ -17,15 +21,23 @@ export default class Home extends React.Component<HelloProps, HelloStatus> {
     }
 
     public render() {
+        const { num, onIncrement, onDecrement } = this.props;
         return <div className='content'>
             <span>Home!!!!!!!!!!!!!!!!</span>
+            <span>{num}</span>
+
+            <p>
+                <button onClick={onIncrement} style={{ marginRight: 20 }}> +  </button>
+                <button onClick={onDecrement}> - </button>
+            </p>
+
             <nav>
                 <ul>
                     <li>
-                        <Link to="/header/">页面一</Link>
+                        <Link to="/header/">header</Link>
                     </li>
                     <li>
-                        <Link to="/hello/">页面二</Link>
+                        <Link to="/hello/">hello</Link>
                     </li>
                 </ul>
             </nav>

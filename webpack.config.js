@@ -62,7 +62,7 @@ module.exports = {
     host: '127.0.0.1', //设置服务器的主机号，默认是localhost
     port: 9000,
     compress: true,
-    open: true // 打开浏览器，默认false
+    open: false // 打开浏览器，默认false
   },
   plugins: [
     new HtmlWebpackPlugin({ //打包输出HTML

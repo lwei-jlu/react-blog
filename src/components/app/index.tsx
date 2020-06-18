@@ -1,9 +1,9 @@
 import React from 'react';
 import { Router, Switch, Route } from 'react-router-dom';
 import {createBrowserHistory} from 'history';
-import Home from '../home';
 import Header from '../header';
-import Hello from '../hello';
+import homeCon from '../../container/homeCon';
+import helloCon from '../../container/helloCon';
 const browserHistory = createBrowserHistory()
 
 export default class App extends React.Component {
@@ -11,9 +11,9 @@ export default class App extends React.Component {
         return (<div>App Container
             <Router history={browserHistory}>
                 <Switch>
-                    <Route path="/" exact component={Home} />
+                    <Route path="/" exact component={homeCon} />
                     <Route path="/header/" component={Header} />
-                    <Route path="/hello/" component={Hello} />
+                    <Route path="/hello/" component={helloCon} />
                 </Switch>
             </Router>
         </div>);

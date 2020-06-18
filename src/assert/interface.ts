@@ -4,3 +4,8 @@ export interface RouteInterface {
     routes?: Array<any>,
     exact?: boolean
 }
+
+export interface StoreState {
+    num: number;
+    value?: string;
+}
