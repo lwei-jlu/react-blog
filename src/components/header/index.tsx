@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { Link } from 'react-router-dom';
 import { Menu } from 'antd';
-import { MailOutlined, AppstoreOutlined, SettingOutlined } from '@ant-design/icons';
+import { MailOutlined, AppstoreOutlined, HomeOutlined } from '@ant-design/icons';
 
 interface HelloProps {
     value?: string;
@@ -27,10 +27,8 @@ export default class Header extends React.Component<HelloProps, HelloStatus> {
                 <Menu.Item key="app" icon={<AppstoreOutlined />}>
                     <Link to="/about">about</Link>
                 </Menu.Item>
-                <Menu.Item key="alipay">
-                    <a href="https://ant.design" target="_blank" rel="noopener noreferrer">
-                        Navigation Four - Link
-                    </a>
+                <Menu.Item key="alipay" icon={<HomeOutlined />}>
+                    <Link to="/">Home</Link>
                 </Menu.Item>
             </Menu>
         </div>
