@@ -18,7 +18,7 @@ export default class Footer extends React.Component<HelloProps, HelloStatus> {
 
     public render() {
         return <div className='footer'>
-            footer
+            <span>{'footer'}</span>
         </div>
     }
 }

@@ -2,6 +2,7 @@ import * as React from 'react'
 import { Link } from 'react-router-dom';
 import { Menu } from 'antd';
 import { MailOutlined, AppstoreOutlined, HomeOutlined } from '@ant-design/icons';
+import './style.scss'
 
 interface HelloProps {
     value?: string;
@@ -20,7 +21,7 @@ export default class Header extends React.Component<HelloProps, HelloStatus> {
 
     public render() {
         return <div className='header'>
-            <Menu mode="horizontal">
+            <Menu mode="horizontal" style={{ background: '#f0f2f5', color: 'rgba(0, 0, 0, 0.65)' }}>
                 <Menu.Item key="mail" icon={<MailOutlined />}>
                     <Link to="/hello">hello</Link>
                 </Menu.Item>

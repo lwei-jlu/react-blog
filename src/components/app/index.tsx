@@ -16,11 +16,11 @@ export default class App extends React.Component {
                         <BackTop />
                         <Header />
                         <Layout>
-                            <Content>
+                            <Content style={{background: '#FFF'}} >
                                 <ContentMain/>
                             </Content>
                         </Layout>
-                        <Footer />
+                        <Footer/>
                     </Layout>
                 </BrowserRouter>
             </div>

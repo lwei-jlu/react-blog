@@ -1,20 +1,14 @@
 import * as React from 'react'
-import { Link } from 'react-router-dom';
-import { Menu } from 'antd';
-import { MailOutlined, AppstoreOutlined, SettingOutlined } from '@ant-design/icons';
-
-interface HelloProps {
-    value?: string;
-}
+import { LoadingComponentProps } from 'react-loadable'
+import './style.scss'
 
 interface HelloStatus {
     value?: string;
 }
-export default class Articles extends React.Component<HelloProps, HelloStatus> {
-    constructor(props: HelloProps) {
+export default class Articles extends React.Component<LoadingComponentProps, HelloStatus> {
+    constructor(props: LoadingComponentProps) {
         super(props);
         this.state = {
-            value: props.value,
         };
     }
 
