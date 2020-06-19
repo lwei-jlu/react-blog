@@ -1,5 +1,7 @@
 import * as React from 'react'
 import { Link } from 'react-router-dom';
+import { Menu } from 'antd';
+import { MailOutlined, AppstoreOutlined, SettingOutlined } from '@ant-design/icons';
 
 interface HelloProps {
     value?: string;
@@ -17,18 +19,20 @@ export default class Header extends React.Component<HelloProps, HelloStatus> {
     }
 
     public render() {
-        return <div className='content'>
-            <span>Header!!!!!!!!!!!!!!!!</span>
-            <nav>
-                <ul>
-                    <li>
-                        <Link to="/">home</Link>
-                    </li>
-                    <li>
-                        <Link to="/hello/">页面二</Link>
-                    </li>
-                </ul>
-            </nav>
+        return <div className='header'>
+            <Menu mode="horizontal">
+                <Menu.Item key="mail" icon={<MailOutlined />}>
+                    <Link to="/hello">hello</Link>
+                </Menu.Item>
+                <Menu.Item key="app" icon={<AppstoreOutlined />}>
+                    <Link to="/about">about</Link>
+                </Menu.Item>
+                <Menu.Item key="alipay">
+                    <a href="https://ant.design" target="_blank" rel="noopener noreferrer">
+                        Navigation Four - Link
+                    </a>
+                </Menu.Item>
+            </Menu>
         </div>
     }
 }
