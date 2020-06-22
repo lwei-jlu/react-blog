@@ -4,12 +4,12 @@ import { Dispatch } from 'redux';
 
 import Home from '../components/home';
 import { decrement, increment } from '../actions';
-import { StoreState } from '../assert/interface';
+import { IStoreState } from '../assert/interface';
 
 
 // 将 reducer 中的状态插入到组件的 props 中
-const mapStateToProps = (state: StoreState) => ({
-    num: state.num
+const mapStateToProps = (state: IStoreState) => ({
+    num: state.counter.num,
 })
 
 // 将 对应action 插入到组件的 props 中

@@ -9,3 +9,7 @@ export interface StoreState {
     num: number;
     value?: string;
 }
+
+export interface IStoreState {
+    counter: StoreState;
+  }

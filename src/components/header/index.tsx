@@ -29,7 +29,7 @@ export default class Header extends React.Component<HelloProps, HelloStatus> {
                     <Link to="/about">about</Link>
                 </Menu.Item>
                 <Menu.Item key="alipay" icon={<HomeOutlined />}>
-                    <Link to="/">Home</Link>
+                    <Link to="/home">Home</Link>
                 </Menu.Item>
             </Menu>
         </div>
