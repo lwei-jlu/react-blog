@@ -12,4 +12,10 @@ export interface StoreState {
 
 export interface IStoreState {
     counter: StoreState;
-  }
+    fetchapi: fetchAPIState;
+}
+
+export interface fetchAPIState {
+    data: any;
+    isFetching: boolean,
+}
