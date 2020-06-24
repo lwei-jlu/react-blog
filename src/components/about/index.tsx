@@ -20,12 +20,26 @@ export default class About extends React.Component<any, AboutState> {
         fetchPost('keji');
     }
 
+    private getData = (data: any[]) => {
+        const re = [] as JSX.Element[];
+        data.forEach(item => {
+            return re.push(<div>
+                <div>{item.title}</div>
+                <a href={item.url}></a>
+                <img src={item.thumbnail_pic_s} alt=""/>
+            </div>);
+        })
+        return re;
+    }
+
     public render() {
         const { isFetching, data } = this.props;
-        console.log(data);
+        const arr = (data && data.result && data.result.data) ? (data.result.data as any []) : [];
+        const dataJSX = this.getData(arr);
         return <div className='about'>
             about!!!!!!!!!!!!!
-            <span>{isFetching}</span>
+            <span>{isFetching ? 'true' : 'false'}</span>
+            {dataJSX}
         </div>
     }
 }

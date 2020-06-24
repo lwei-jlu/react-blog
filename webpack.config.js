@@ -59,10 +59,16 @@ module.exports = {
   devServer: {
     inline: true, //实时刷新
     hot: true, // 模块热替换机制
-    host: '127.0.0.1', //设置服务器的主机号，默认是localhost
+    host: '10.190.177.40', //设置服务器的主机号，默认是localhost 10.190.177.40
     port: 9000,
     compress: true,
-    open: false // 打开浏览器，默认false
+    open: false, // 打开浏览器，默认false
+    proxy: {
+      '/toutiao/index': {
+          target: 'http://v.juhe.cn/',
+          changeOrigin: true,
+        }
+      }
   },
   plugins: [
     new HtmlWebpackPlugin({ //打包输出HTML

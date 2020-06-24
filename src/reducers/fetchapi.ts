@@ -12,7 +12,7 @@ export default (state: fetchAPIState = {data: {}, isFetching: false}, action: Fe
       case REQUEST_POSTS:
         return {...state, isFetching: true};
       case RECEIVE_POSTS:
-        return {...state, isFetching: false};
+        return {...state, isFetching: false, data: action.data};
       default:
         return state;
     }
