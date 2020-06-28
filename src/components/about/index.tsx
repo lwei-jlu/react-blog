@@ -25,7 +25,7 @@ export default class About extends React.Component<any, AboutState> {
         data.forEach(item => {
             return re.push(<div>
                 <div>{item.title}</div>
-                <a href={item.url}></a>
+                <a href={item.url}>{item.url}</a>
                 <img src={item.thumbnail_pic_s} alt=""/>
             </div>);
         })
