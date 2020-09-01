@@ -5,6 +5,7 @@
   "homepage": ".",
   "proxy": "http://apis.juhe.cn",
   "dependencies": {
+    "@ant-design/icons": "^4.2.2",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
@@ -12,22 +13,23 @@
     "@types/node": "^12.12.47",
     "@types/react": "^16.9.36",
     "@types/react-dom": "^16.9.8",
+    "@types/react-loadable": "5.4.0",
     "@types/react-redux": "^7.1.9",
     "@types/react-router-dom": "^5.1.5",
-    "@types/react-loadable": "5.4.0",
+    "antd": "^4.6.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-loadable": "5.4.0",
     "react-redux": "^7.2.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
     "redux": "^4.0.5",
-    "typescript": "^3.7.5",
-    "react-loadable": "5.4.0"
+    "typescript": "^3.7.5"
   },
   "scripts": {
     "start": "npm run dev",
-    "build": "webpack --mode development",
-    "dev": "webpack-dev-server --config webpack.config.js --mode development"
+    "build": "node build/build.js",
+    "dev": "webpack-dev-server --config build/webpack.dev.conf.js --mode development"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -56,11 +58,16 @@
     "awesome-typescript-loader": "^5.2.1",
     "axios": "^0.19.2",
     "babel-loader": "^8.0.5",
+    "chalk": "^4.1.0",
+    "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^3.6.0",
     "eslint": "^7.2.0",
     "eslint-plugin-react": "^7.20.0",
     "html-webpack-plugin": "^4.3.0",
+    "mini-css-extract-plugin": "^0.11.0",
     "node-sass": "^4.14.1",
+    "optimize-css-assets-webpack-plugin": "^5.0.4",
+    "ora": "^5.0.0",
     "redux-thunk": "^2.3.0",
     "sass-loader": "^8.0.2",
     "style-loader": "^1.2.1",
