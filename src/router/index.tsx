@@ -1,9 +1,10 @@
-import Hello from '../components/hello'
+
 import About from '../components/about';
 import Articles from '../components/Articles';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import App from '../components/app';
 import * as React from 'react'
+import { Hello } from '../components/hello';
 
 const routeLists = [
     {
