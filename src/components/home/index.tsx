@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { List } from '../list';
 
 interface HelloProps {
     value?: string;
@@ -28,6 +29,7 @@ export default class Home extends React.Component<HelloProps, HelloStatus> {
                 <button onClick={onIncrement} style={{ marginRight: 20 }}> +  </button>
                 <button onClick={onDecrement}> - </button>
             </p>
+            <List val={num} obj={{x: 10}}></List>
         </div>
     }
 }
